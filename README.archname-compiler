@@ -1,0 +1,37 @@
+It has been suggested as a new convention to name binary distributions
+something like
+
+    package-version-bin-binversion-archname-compiler
+
+with the "-bin-" part being verbatim, i.e.e.g.
+
+    MIME-Base64-2.05-bin-1-OS2.tar.gz
+    MIME-Base64-2.05-bin-01-Win32-gcc.tar.gz
+    MIME-Base64-2.05-bin-1-next-fat-gcc.tar.gz
+
+The archname part should be inspiered (or even identical) to
+$Config{archname}.
+
+The existence of binary packages also implicates that there's a need
+for specific README files for a port. Maybe we should give such README
+files names that mimic the name of the distribution file?
+
+This would allow that some READMEs get folded back into the source
+distribution (where such a thing seems appropriate) without a clash of
+filenames (except for 8.3 filesystems which we just cannot support
+very well, whatever we do).
+
+We could append everything after "-bin-" after a dot, e.g.
+
+    README.02-archname-compiler
+
+OK, and if this is too bothersome for a maintainer because he doesn't
+want to write a new README for each distribution, we could also look
+for a
+
+    README.archname-compiler
+
+It's just a suggestion. _This_ README file is just a test if PAUSE
+is programmed to support this suggestion or not.
+
+andreas koenig, 1998-02-17
